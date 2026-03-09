@@ -1,0 +1,10 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("../data/netflix_cleaned.csv")
+
+content_type = df['type'].value_counts()
+
+content_type.plot(kind='bar')
+plt.title("Movies vs TV Shows on Netflix")
+plt.show()
